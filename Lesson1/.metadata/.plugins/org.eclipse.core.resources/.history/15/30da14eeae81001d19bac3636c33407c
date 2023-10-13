@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class BaiTap4 {
+	static Scanner scan = new Scanner(System.in);
+	
+	public BaiTap4() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	//Hàm nhập x và n
+	public static int nhapSoN(Scanner scan) {
+		boolean flag = true;
+		System.out.println("Vui lòng nhập số N");
+		int n = 0;
+		do {
+			n = Integer.parseInt(scan.nextLine());
+			if (n < 0 ) {
+				System.out.println("Vui lòng nhập số N nguyên dương");
+			} else {
+
+			}
+		} while (flag);
+		return n;
+	}
+}

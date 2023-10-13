@@ -1,0 +1,18 @@
+
+public class XuLy {
+
+	public XuLy() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public static int[] nhapMang(int n) {
+		int a [] = new int [n];
+		
+		
+		return a;
+	}
+}

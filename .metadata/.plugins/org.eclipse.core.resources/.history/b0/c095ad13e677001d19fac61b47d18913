@@ -1,0 +1,10 @@
+import java.util.Scanner;
+
+public class XuLy {
+
+	public static void main(String[] args) {
+		Scanner new = new Scanner(System.in);
+
+	}
+
+}

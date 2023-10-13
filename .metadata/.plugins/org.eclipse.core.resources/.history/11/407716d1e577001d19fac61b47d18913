@@ -1,0 +1,10 @@
+
+public class XuLy {
+
+	public static void main(String[] args) {
+		double price = 99d;
+		System.out.println(price);
+
+	}
+
+}

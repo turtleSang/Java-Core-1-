@@ -1,0 +1,54 @@
+import java.util.Scanner;
+
+public class BaiTap4 {
+	static Scanner scan = new Scanner(System.in);
+
+	public BaiTap4() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		System.out.println("Hàm tính biểu thức S(n) = x + x^1 + x^2 +...+ x^ns");
+		int a = tinhXmuN(2, 0);
+		System.out.println(a);
+	}
+
+	// Hàm nhập x và n
+	public static int nhapSoN(Scanner scan) {
+		boolean flag = true;
+		System.out.println("Vui lòng nhập số N");
+		int n = 0;
+		do {
+			n = Integer.parseInt(scan.nextLine());
+			if (n < 0) {
+				System.out.println("Vui lòng nhập số N nguyên dương");
+			} else {
+				flag = false;
+			}
+		} while (flag);
+		return n;
+	}
+
+	public static int nhapSoX(Scanner scan) {
+		System.out.println("Vui lòng nhập số X: ");
+		int x = Integer.parseInt(scan.nextLine());
+		return x;
+	}
+
+	//Tính x^n
+	public static int tinhXmuN(int x, int n) {
+		int ketQua = 1;
+		for (int i = 1; i  <= n; i++) {
+			ketQua *= x;
+		}
+		return ketQua;
+	}
+	
+	
+	public static void tinhBieuThuc(int x, int n) {
+		int tong = 0;
+		for (int i = 1; i <= n; i++) {
+			tong += tinhXmuN(x, i)
+		}
+	}
+}

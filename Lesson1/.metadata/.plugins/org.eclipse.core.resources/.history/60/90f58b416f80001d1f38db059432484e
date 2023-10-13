@@ -1,0 +1,25 @@
+
+public class XuLy {
+
+	public XuLy() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public static void xuLySo(int num) {
+		// tạo bản sao của N để xử lý
+		int soBanDau = num;
+		int soDangTach; //Tách dần theo thứ tự từ hàng đơn vị
+		int tongCacSo = 0;
+		int count = 0;
+		do {
+			soDangTach = soBanDau%10;
+			count++;
+			tongCacSo += soDangTach;
+			
+		} while (soBanDau%10 != 0) ;
+	}
+}

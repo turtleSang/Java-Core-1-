@@ -1,0 +1,119 @@
+import java.util.Scanner;
+
+public class BaiTap1 {
+	static final int keo = 1;
+	static final int bua = 2;
+	static final int bao = 3;
+	static Scanner scan = new Scanner(System.in);
+
+	public BaiTap1() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		play();
+
+	}
+
+	// Hàm chọn của người dùng
+	public static int chonKeoBuaBaoNguoiDung() {
+		System.out.println("Chọn vui lòng chọ Kéo Búa Bao");
+		System.out.println("1 - Kéo");
+		System.out.println("2 - Búa");
+		System.out.println("3 - Bao");
+		int luaChon = Integer.parseInt(scan.nextLine());
+		return luaChon;
+	}
+
+	// Hàm chọn của máy
+	public static int chonKeoBuaBaoMay() {
+		int luaChon = (int) (Math.random() * 3 + 1);
+		switch (luaChon) {
+		case keo:
+			System.out.println("Máy chọn Kéo");
+			break;
+		case bua: 
+			System.out.println("Máy chọn Búa");
+			break;
+		case bao:
+			System.out.println("Máy chọn Bao");
+			break;
+		default:
+			break;
+		}
+		return luaChon;
+	}
+
+	// Hàm thắng thua truyền vào  lựa chọn của người và máy trả 0 hòa, 1 người thắng, 2 máy thắng
+	public static int timThangThua(int luaChonNguoi, int luaChonMay) {
+		int win = 0;// Trả về kết quả 0 hòa; 1 Người thắng; 2 máy thắng
+		switch (luaChonNguoi) {
+		case 1:
+			if (luaChonMay == 1) {
+				win = 0;
+			} else if (luaChonMay == 2) {
+				win = 2;
+			} else {
+				win = 1;
+			} 
+			break;
+		case 2: 
+			if (luaChonMay == 1) {
+				win = 1;
+			} else if (luaChonMay == 2) {
+				win = 0;
+			} else {
+				win = 2;
+			} 
+			break;
+		case 3:
+			if (luaChonMay == 1) {
+				win = 2;
+			} else if (luaChonMay == 2) {
+				win = 1;
+			} else {
+				win = 0;
+			} 
+			break;
+		default:
+			break;
+		}
+
+		return win;
+	}
+
+	public static void play() {
+		int countNguoi = 0;
+		int countMay = 0;
+		int play = -1;
+		do {
+			
+			int luaChonNguoi = chonKeoBuaBaoNguoiDung();
+			int luaChonMay = chonKeoBuaBaoMay();
+			int thangThua = timThangThua(luaChonNguoi, luaChonMay);
+			switch (thangThua) {
+			case 1:
+				System.out.println("Bạn Đã Thắng");
+				countNguoi++;
+				break;
+			case 2:
+				System.out.println("Bạn Đã Thua");
+				countMay++;
+				break;
+			default:
+				System.out.println("Hòa");
+				break;				
+			}
+			System.out.println("Bấm số 0 để dừng và xem tỉ số  - Bấm số khác để tiếp tục chơi");
+			play = Integer.parseInt(scan.nextLine());
+		} while (play != 0);
+		if (countNguoi>countMay) {
+			System.out.println("Bạn đã thắng với tỉ số: " + countNguoi + " - " + countMay);
+		}else if (countNguoi<countMay) {
+			System.out.println("Máy đã thắng với tỉ số: " + countMay + " - " + countNguoi);
+		} else {
+			System.out.println("Bạn và Máy đã Hòa nhau với tỉ số: " + countNguoi + " - " + countMay);
+		}
+	}
+
+}

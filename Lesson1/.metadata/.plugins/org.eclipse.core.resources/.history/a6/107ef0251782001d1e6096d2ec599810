@@ -1,0 +1,16 @@
+
+public class BaiTap6 {
+	static Scanner scan = new Scanner(System.in);
+	public BaiTap6() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	//Hàm nhập tiền gửi tiết kiệm
+	public static long nhapTienGuiTietKiem() {
+		
+	}
+}

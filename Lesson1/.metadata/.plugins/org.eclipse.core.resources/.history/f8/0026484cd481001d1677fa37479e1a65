@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class BaiTap5 {
+	static Scanner scan = new Scanner(System.in);
+
+	public BaiTap5() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		long n = nhapN(scan);
+		long giaiThuaN = timSoGiaiThua(n);
+		System.out.println("Giai thừ của số n = " + n + " là " + giaiThuaN);
+
+	}
+
+	// Hàm nhập n
+	public static long nhapN(Scanner scan) {
+		System.out.println("Vui lòng nhập số n nguyên dương: ");
+		long n = -1;
+		do {
+			n = Integer.parseInt(scan.nextLine());
+			if (n<0) {
+				System.out.println("Vui lòng nhập số n lớn hơn hoặc bằng 0: ");
+			}
+		} while (n < 0);
+		return n;
+	}
+
+	// Hàm tính giai thừa
+	public static long timSoGiaiThua(long n) {
+		long giaiThuaN = 1;
+		for (long i = 1; i <= n && n != 0 && n != 1; i++) {
+			giaiThuaN *= i;
+		}
+
+		return giaiThuaN;
+	}
+}

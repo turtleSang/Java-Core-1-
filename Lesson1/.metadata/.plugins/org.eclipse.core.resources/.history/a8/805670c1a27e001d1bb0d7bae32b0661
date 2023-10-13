@@ -1,0 +1,17 @@
+import java.util.Scanner;
+
+public class XuLy {
+	static Scanner scan = new Scanner(System.in);
+	public XuLy() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+	public static void doanSo() {
+		int soBiMat = (int) Math.random()*99 +1;
+	}
+}

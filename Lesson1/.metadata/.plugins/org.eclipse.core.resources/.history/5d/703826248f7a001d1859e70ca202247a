@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class XuLy {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int a;
+		int b;
+		int c;
+		System.out.print("Số a");
+		a = Integer.parseInt(scan.nextLine());
+		System.out.print("Số b");
+		b = Integer.parseInt(scan.nextLine());
+		System.out.print("Số c");
+		c = Integer.parseInt(scan.nextLine());
+		 if (a <= b) {
+			 if (b<=c) {
+				System.out.println(a + "<" + b + "<" + c);
+			} else {
+
+			}
+		} else {
+
+		}
+	}
+
+}

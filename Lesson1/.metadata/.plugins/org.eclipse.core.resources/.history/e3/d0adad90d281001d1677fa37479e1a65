@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+public class BaiTap5 {
+	 static Scanner scan = new Scanner(System.in);
+	public BaiTap5() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	//Hàm nhập n
+	
+	
+	
+	//Hàm tính giai thừa
+
+	
+	public static int timSoGiaiThua (int n) {
+		int giaiThuaN = 0;
+		for (int i = 1; i <= n && n != 0 && n != 1; i++) {
+			giaiThuaN *= i;
+		}
+		
+		return giaiThuaN;
+	}
+}

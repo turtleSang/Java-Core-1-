@@ -1,0 +1,45 @@
+
+public class BaiTap7 {
+
+	public BaiTap7() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		int n = 10;
+		inTamGiacDacRuot(n);
+
+	}
+	//Hàm in ra khoảng trắng trên dòng thứ i (Số khoảng trắng in ra ở hàng thứ i bằng n-i )
+	public static void inKhoangTrang (int n, int i) {
+		int soKhoangTrang = n-i;
+		for (int j = 1; j <= soKhoangTrang; j++) {
+			System.out.print("   ");
+		}
+	}
+	
+	////Hàm in dấu * ở dòng thứ i mỗi dòng sẽ cộng 2 dấu * của dòng trên dòng đầu tiên in 1 dấu *
+	public static void indau ( int i) {
+		int soDau = 2*i-1;// số dấu * bằng 2i-1
+		for (int j = 1; j <= soDau; j++) {
+			System.out.print(" * ");
+		}
+	}
+	// Hàm in tam giác đầy dấu *
+	public static void inTamGiacDacRuot (int n) {
+		for (int i = 1; i <= n; i++) {
+			inKhoangTrang(n, i);
+			indau(i);
+			System.out.println("\n");
+		}
+	}
+
+	// Hàm in ra dấu * ở tam giác rỗng ruột
+		public static void inDauCach2 (int i, int n) {
+			int soVongLap = 2*i-1;// số vòng lặp bằng 2i-1
+			for (int j = 1; j <= soDau; j++) {
+				System.out.print(*); // Bắt đầu của vòng lặp này sẽ in 1 dấu *
+				if(i);
+			}
+		}
+}

@@ -1,0 +1,15 @@
+
+public class BaiTap1 {
+	static final int keo = 1;
+	static final int bua = 2;
+	static final int bao = 3;
+	public BaiTap1() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	
+}

@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class BaiTap1 {
+	static final int keo = 1;
+	static final int bua = 2;
+	static final int bao = 3;
+	Scanner scan = new Scanner(System.in);
+	public BaiTap1() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	// Hàm chọn của người dùng
+	public static int chosse (scan) {
+		System.out.println("Chọn vui lòng chọ Kéo Búa Bao");
+		System.out.println("1 - Kéo");
+		System.out.println("2 - Búa");
+		System.out.println("3 - Bao");
+		int luaChon = Integer.parseInt(scan.nextLine);
+		
+	}
+	
+}

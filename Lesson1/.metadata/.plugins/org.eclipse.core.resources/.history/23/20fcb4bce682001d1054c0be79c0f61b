@@ -1,0 +1,67 @@
+
+public class BaiTap7 {
+
+	public BaiTap7() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		int n = 10;
+		inTamGiacDacRuot(n);
+		inTamGiacRongRuot(n);
+
+	}
+
+	// Hàm in ra khoảng trắng trên dòng thứ i (Số khoảng trắng in ra ở hàng thứ i
+	// bằng n-i )
+	public static void inKhoangTrang(int n, int i) {
+		int soKhoangTrang = n - i;
+		for (int j = 1; j <= soKhoangTrang; j++) {
+			System.out.print("   ");
+		}
+	}
+
+	//// Hàm in dấu * ở dòng thứ i
+	public static void indau(int i) {
+		int soDau = 2 * i - 1;// số dấu * bằng 2i-1
+		for (int j = 1; j <= soDau; j++) {
+			System.out.print(" * ");
+		}
+	}
+
+	// Hàm in tam giác đầy dấu *
+	public static void inTamGiacDacRuot(int n) {
+		for (int i = 1; i <= n; i++) {
+			inKhoangTrang(n, i);
+			indau(i);
+			System.out.println("");
+		}
+	}
+
+	// Hàm in ra dấu * ở dòng thứ i của tam giác rỗng ruột
+	public static void inDauCach2(int n, int i) {
+		int soVongLap = 2 * i - 1;// số vòng lặp bằng tại hàng thứ i là 2i-1
+		for (int j = 1; j <= soVongLap; j++) {
+			/*
+			 * in ra dấu * tại điểm: - j = 1 - j == soVongLap - i = n Còn lại in khoảng
+			 * Trắng
+			 */
+
+			if (i == n || j == soVongLap || i == n) {
+				System.out.print(" * ");
+			} else {
+				System.out.print("   ");
+			}
+
+		}
+	}
+
+	// Hàm in ra tam giác rỗng ruột
+	public static void inTamGiacRongRuot(int n) {
+		for (int i = 1; i <= n; i++) {
+			inKhoangTrang(n, i);
+			inDauCach2(n, i);
+			System.out.println("");
+		}
+	}
+}

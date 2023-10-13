@@ -1,0 +1,56 @@
+import java.util.Scanner;
+
+public class BaiTap1 {
+	static final int keo = 1;
+	static final int bua = 2;
+	static final int bao = 3;
+	static Scanner scan = new Scanner(System.in);
+	public BaiTap1() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		System.out.println(chonKeoBuaBaoMay());
+
+	}
+	// Hàm chọn của người dùng
+	public static int chonKeoBuaBaoNguoiDung () {
+		System.out.println("Chọn vui lòng chọ Kéo Búa Bao");
+		System.out.println("1 - Kéo");
+		System.out.println("2 - Búa");
+		System.out.println("3 - Bao");
+		int luaChon = Integer.parseInt(scan.nextLine());
+		//Người dùng nhập số khác 1 2 3
+		switch (luaChon) {
+		case 1:
+			System.out.println("Người dùng chọn Kéo");
+			break;
+		case 2:
+			System.out.println("Người dùng chọn Búa");
+		case 3:
+			System.out.println("Người dùng chọn Bao");
+		default:
+			System.out.println("Người dùng nhập Sai");
+			break;
+		}
+		return luaChon;
+		
+	}
+	//Hàm chọn của máy
+	public static int chonKeoBuaBaoMay() {
+		int luaChon = (int) (Math.random()*3 +1);
+		return luaChon;
+	}
+	//Hàm chơi game
+	public static void play() {
+		int countNguoi = 0;
+		int countMay = 0;
+		int play = -1;
+		do {
+			int luaChonMay = chonKeoBuaBaoMay();
+			int luaChonNguoi = chonKeoBuaBaoNguoiDung();
+			
+		} while (play != 0);
+	}
+	
+}

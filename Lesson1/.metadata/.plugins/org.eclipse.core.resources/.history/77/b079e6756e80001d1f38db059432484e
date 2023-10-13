@@ -1,0 +1,16 @@
+
+public class XuLy {
+
+	public XuLy() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	public static void xuLySo(int num) {
+		// tạo bản sao của N để xử lý
+		int soBanDau = num;
+	}
+}

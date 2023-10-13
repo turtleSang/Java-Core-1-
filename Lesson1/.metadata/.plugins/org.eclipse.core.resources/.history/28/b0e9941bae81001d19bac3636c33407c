@@ -1,0 +1,18 @@
+
+public class BaiTap4 {
+	static int x;
+	static int n;
+	
+	public BaiTap4() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+	//Hàm nhập x và n
+	public static void nhapXvaN() {
+		
+	}
+}

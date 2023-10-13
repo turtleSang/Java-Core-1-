@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class BaiTap6 {
+	static Scanner scan = new Scanner(System.in);
+	public BaiTap6() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		long tienGui = nhapTienGuiTietKiem(scan);
+		System.out.println(tienGui);
+	}
+	//Hàm nhập tiền gửi tiết kiệm
+	public static long nhapTienGuiTietKiem(Scanner scan) {
+		long tienGui = 0;
+		System.out.println("Vui lòng nhập số tiền bạn muốn gửi");
+		do {
+			tienGui =Long.parseLong(scan.nextLine());
+			if (tienGui<=0) {
+				System.out.println("Vui lòng nhập tiền gửi >0");
+			}
+		} while (tienGui <= 0);		
+		
+		return tienGui;
+	}
+	public static float nhapLaiSuatGui(Scanner scan) {
+		float interest = 0;
+	}
+}

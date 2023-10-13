@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class BaiTap3 {
+	static Scanner scan = new Scanner(System.in);
+
+	public BaiTap3() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Chương trình tìm Tổng các số lẻ nguyên dương nhỏ hơn N");
+		int n = nhapN();
+		tinhTongCacSoLe(n);
+		
+	}
+	//Hàm nhập số n của người dùng 
+	public static int nhapN() {
+		int n = 0;
+		System.out.print("Mời bạn nhập vào số N: ");
+		do {
+			
+			n = Integer.parseInt(scan.nextLine());
+			if(n <= 0){
+				System.out.print("Bạn đã nhập sai vui lòng nhập lại số nguyên lớn hơn 0: ");
+			}
+		} while (n <= 0);
+		
+		return n;
+	}
+	//Hàm tính tổng các số lẻ nhỏ hơn N
+	public static void tinhTongCacSoLe(int n) {
+		int tongSoLe = 0;
+		
+		for (int i = 0; i < n; i++) {
+			if (i%2 != 0) {
+				tongSoLe +=i;
+			}
+		}
+		System.out.println("Tổng các số lẻ nhỏ hơn " + n + " là: " + tongSoLe);
+	}
+}

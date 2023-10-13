@@ -1,0 +1,30 @@
+import java.util.Scanner;
+
+public class XuLy {
+
+	public XuLy() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Bạn muốn thấy bao nhiêu số Fibonaci");
+		int num = Integer.parseInt(scan.nextLine());
+		printFibonacci(num);
+		
+
+	}
+	public static void printFibonacci (int num) {
+		int numFi = 0;
+		int preNumFi1 = 0;
+		int preNumFi2 = 0;
+		for (int i = 0; i < num; i++) {
+			if ( i == 0 || i == 1) {
+				
+			} else {
+				
+			}
+			System.out.println("Số fibonaci thứ " + (i +1) + " là: " + numFi);
+		}
+	}
+}

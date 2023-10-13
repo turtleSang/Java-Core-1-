@@ -1,0 +1,16 @@
+import java.util.Scanner;
+
+public class XuLy {
+
+	public XuLy() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int tongCacSoChiaHetCho3 = demTongSoChiaHetCho3(scan);
+		System.out.println("Tổng các số chia hết cho 3 là: " +tongCacSoChiaHetCho3);
+		
+	}
+	
+}

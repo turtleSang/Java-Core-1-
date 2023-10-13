@@ -1,0 +1,45 @@
+
+public class XuLy {
+
+	public XuLy() {
+		// TODO Auto-generated constructor stub
+	}
+
+	public static void main(String[] args) {
+		inLeChanDungFor();
+		inLeChanDungWhile();
+		
+
+	}
+	public static void inLeChanDungFor () {
+		final int A = 100;
+		String soChan = "Số chẵn dưới " + A +  " là: ";
+		String soLe = "Số lẻ dưới " + A +  " là: ";
+		for (int i = 0; i < 100; i++) {
+			if ((i%2) == 0) {
+				soChan += i + "; ";
+			} else {
+				soLe += i  + "; ";
+			}
+		}
+		System.out.println(soChan);
+		System.out.println(soLe);
+	}
+	
+	public static void inLeChanDungWhile() {
+		final int A = 100;
+		String soChan = "Số chẵn dưới " + A +  " là: ";
+		String soLe = "Số lẻ dưới " + A +  " là: ";
+		int i = 0;
+		while (i < A) {
+			if ((i%2) == 0) {
+				soChan += i + "; ";
+			} else {
+				soLe += i  + "; ";
+			}
+			i++;
+		}
+		System.out.println(soChan);
+		System.out.println(soLe);
+	}
+}
